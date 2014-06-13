@@ -1,6 +1,6 @@
 ## Building Curl
 
-Here's how to build a custom Curl binary (with OpenSSL) which supports client certificate authentication on OS X. If you're not familiar with the issue, you might want to read this: [http://curl.haxx.se/mail/archive-2013-10/0036.html]()
+Here's how to build a custom Curl binary (with OpenSSL) which supports client certificate authentication on OS X. If you're not familiar with the issue, you might want to read [this: http://curl.haxx.se/mail/archive-2013-10/0036.html](http://curl.haxx.se/mail/archive-2013-10/0036.html)
 
 ### Install AutoPkg
 
@@ -13,9 +13,12 @@ Get the latest [AutoPkg](https://github.com/autopkg/autopkg) installed and worki
 
 ### Build with AutoPkg
 
-This repository includes an AutoPkg recipe to download the current release version of curl, compile it and package it.
+This repository includes an AutoPkg recipe which downloads the current release version of curl, compiles it and creates a pkg installer.
 
     $ git clone https://github.com/hjuutilainen/curl-for-munki.git
     $ cd curl-for-munki/autopkg
     $ autopkg run -v curlWithSystemOpenSSL.pkg.recipe
 
+### Build with Homebrew
+
+Building and packaging curl with Homebrew is not working anymore. It seems that Homebrew currently builds curl using Apple's own Secure Transport engine instead of OpenSSL.
