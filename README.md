@@ -22,3 +22,7 @@ This repository includes an AutoPkg recipe which downloads the current release v
 ### Build with Homebrew
 
 Building and packaging curl with Homebrew is not working anymore. It seems that Homebrew currently builds curl using Apple's own Secure Transport engine instead of OpenSSL.
+
+### Installer package downloads
+
+Latest pre-built installer packages are for curl 7.38.0 and can be downloaded from the [releases page](https://github.com/hjuutilainen/curl-for-munki/releases/latest). These have been built with `/usr/local` prefix.
